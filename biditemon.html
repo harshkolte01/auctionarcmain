@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionArc - Bid</title>
+    <link rel="stylesheet" href="cssfiles/rolebasedaccess.css">
+    <link rel="stylesheet" href="cssfiles/biditemon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="mainpage.html"><img src="images/logo-white-removebg-preview.png" alt="Logo"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="auctionlist.html" class="role-link hidden">Auction List</a></li>
+                    <li><a href="auction.html">Auctions</a></li>
+                    <li><a href="sellinfoadd.html">Sell</a></li>
+                    <li><a href="#">Become a Seller</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a id="userLink" href="myprofile.html">Profile</a></li>
+                    <li><a id="logout" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <section class="auction-container">
+            <div class="auction-details">
+                <div class="product-image">
+                    <img id="productImage" src="" alt="Product Image">
+                </div>
+                <div class="product-info">
+                    <h2 id="productName">Product Name</h2>
+                    <p>Starting Price: $<span id="startingPrice"></span></p>
+                    <p>Time Remaining: <span id="timer">00:00:00</span></p>
+                </div>
+                <div class="bid-section">
+                    <i class="fa fa-hand-pointer bid-icon" id="bidIcon"></i>
+                    <input type="text" id="bidAmount" placeholder="Enter your bid" readonly>
+                    <button id="submitBid">Submit Bid</button>
+                </div>
+            </div>
+            <div class="bid-history">
+                <h3>Bid History</h3>
+                <ul id="bidList">
+                    <!-- Bidders and their amounts will be displayed here -->
+                </ul>
+            </div>
+        </section>
+
+    <!-- JavaScript files -->
+    <script type="module" src="jsfiles/firebase-config.js"></script>
+    <script type="module" src="jsfiles/biditemon.js"></script>
+    <script type="module" src="jsfiles/index.js"></script>
+    <script type="module" src="jsfiles/user-status.js"></script>
+</body>
+</html>

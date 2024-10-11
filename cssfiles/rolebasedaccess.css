@@ -1,0 +1,9 @@
+/* CSS class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* CSS class to show elements (optional) */
+.visible {
+    display: block;
+}

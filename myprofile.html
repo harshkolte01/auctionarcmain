@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionArc</title>
+    <link rel="stylesheet" href="cssfiles/rolebasedaccess.css">
+    <link rel="stylesheet" href="cssfiles/myprofile2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="mainpage.html"><img src="images/logo-white-removebg-preview.png"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="auctionlist.html" class="role-link hidden">Auction List</a></li>
+                    <li><a href="auction.html">Auctions</a></li>
+                    <li><a href="sellinfoadd.html">Sell</a></li>
+                    <li><a href="">Become a seller</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a id="userLink" href="myprofile.html">Profile</a></li>
+                    <li><a id="logout" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <div class="profile-container">
+        <img src="images/account_circle_black.png" style="width: 50px; height: 50px;">
+        <h1>My Profile</h1>
+        <div class="profile-field">
+            <label for="username">Username:</label>
+            <input type="text" id="username" readonly>
+        </div>
+        <div class="profile-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" readonly>
+        </div>
+        <div class="profile-field">
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="pass_word" readonly>
+                <i class="fa fa-eye toggle-password" data-target="pass_word"></i>
+            </div>
+        </div>
+        <div class="profile-field">
+            <label for="money">Money: $</label>
+            <div class="moneyadd-container">
+                <input type="moneyIn" id="moneyIn" readonly>
+                <i class="fa fa-plus addmoney" data-target="moneyIn"></i>
+            </div>
+        </div>
+        <a>
+            <button id="editProfileButton">Edit Profile</button>
+            <button id="orderList">Order List</button>
+            <script>
+                const orderListButton = document.getElementById("orderList");
+                orderListButton.addEventListener("click", function () {
+                    window.location.href = "orderlist.html";
+                });
+            </script>
+        </a>
+    </div>
+    <!-- java script -->
+    <script type="module" src="jsfiles/firebase-config.js"></script>
+    <script type="module" src="jsfiles/index.js"></script>
+    <script type="module" src="jsfiles/user-status.js"></script>
+    <script type="module" src="jsfiles/myprofile.js"></script>
+    <script type="module" src="jsfiles/logout.js"></script>
+    <script type="module" src="jsfiles/rolebasedaccess.js"></script>
+</body>
+
+</html>

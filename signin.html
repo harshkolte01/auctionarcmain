@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionArc</title>
+    <link rel="stylesheet" href="cssfiles/index.css">
+    <link rel="stylesheet" href="cssfiles/signin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script type="module" src="jsfiles/firebase-config.js"></script>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo-white-removebg-preview.png"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">Auctions</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Become a seller</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="signin.html">Sign in/Signup</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form id="signupForm" action="#">
+                    <h1>Create Account</h1>
+                    <span>Use your email for registration</span>
+                    <input type="usertype" name="usertype" id="usertype" value="Buyer" readonly>
+                    <input type="username" name="username" placeholder="Username" id="username"/>
+                    <input type="email" name="email" placeholder="Email" id="email"/>
+                    <div class="password-container">
+                        <input type="password" placeholder="Password" id="signUpPassword" name="password" />
+                        <i class="fa fa-eye toggle-password" data-target="signUpPassword"></i>
+                    </div>
+                    <button id="signUpButton">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form id="signinForm" action="#">
+                    <h1>Sign in</h1>
+                    <span>User your emailID</span>
+                    <select name="usertype" id="usertype" required>
+                        <option value="" disabled selected>Select User Type</option>
+                        <option value="Buyer">Buyer</option>
+                        <option value="Seller">Seller</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+
+                    <input type="email" name="email" placeholder="Email" id="semail" />
+                    <div class="password-container">
+                        <input type="password" placeholder="Password" id="signInPassword" name="password" />
+                        <i class="fa fa-eye toggle-password" data-target="signInPassword"></i>
+                    </div>
+                    <button id="signInButton">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome to AuctionArc</h1>
+                        <p>Register today to explore the arc of opportunities with AuctionArc. If already connected with
+                            us click on SignIn.</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Welcome to AuctionArc</h1>
+                        <p>Welcome back to AuctionArc! Sign in and continue exploring endless auction opportunities. If
+                            new click on SignUp.</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- java script -->
+    <script src="jsfiles/index.js"></script>
+    <script type="module" src="jsfiles/signup.js"></script>
+    <script type="module" src="jsfiles/signin.js"></script>
+    <script type="module" src="jsfiles/signslide-toggle.js"></script>
+    <script type="module" src="jsfiles/redirectojs.js"></script>
+    <script type="module" src="jsfiles/index.js"></script>
+</body>
+
+</html>

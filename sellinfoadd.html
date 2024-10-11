@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Product - AuctionArc</title>
+    <link rel="stylesheet" href="cssfiles/rolebasedaccess.css">
+    <link rel="stylesheet" href="cssfiles/sellinfoadd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="mainpage.html"><img src="images/logo-white-removebg-preview.png" alt="AuctionArc Logo"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="auctionlist.html" class="role-link hidden">Auction List</a></li>
+                    <li><a href="auction.html">Auctions</a></li>
+                    <li><a href="sellinfoadd.html">Sell</a></li>
+                    <li><a href="">Become a seller</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a id="userLink" href="myprofile.html">Profile</a></li>
+                    <li><a id="logout" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <div class="sell-info-container">
+        <h1>Product Sell Information</h1>
+        <form id="sellProductForm">
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Product Image:</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="startingPrice">Product Starting Price:</label>
+                <input type="number" id="startingPrice" name="startingPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="Video Game">Video Game</option>
+                    <option value="Outdoor Game">Outdoor Game</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Toys">Toys</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Music">Music</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="totalBidTime">Total Bid Time (minutes):</label>
+                <input type="number" id="totalBidTime" name="totalBidTime" required>
+            </div>
+            <div class="form-group">
+                <label for="sellerName">Seller Name:</label>
+                <input type="text" id="sellerName" name="sellerName" readonly>
+            </div>
+            <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+    </div>
+
+    <!-- JavaScript files -->
+    <script type="module" src="jsfiles/firebase-config.js"></script>
+    <script type="module" src="jsfiles/index.js"></script>
+    <script type="module" src="jsfiles/user-status.js"></script>
+    <script type="module" src="jsfiles/logout.js"></script>
+    <script type="module" src="jsfiles/sellinfoadd.js"></script>
+    <script type="module" src="jsfiles/rolebasedaccess.js"></script>
+</body>
+</html>

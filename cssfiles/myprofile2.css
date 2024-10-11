@@ -1,0 +1,350 @@
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* Header */
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(10, 10, 41, 1), rgba(10, 10, 41, 1)), url(images/newbg2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+    background-color: #08081c;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  nav img {
+    width: 150px;
+  }
+
+  .nav-links {
+    text-align: right;
+  }
+
+  .nav-links ul {
+    list-style: none;
+  }
+
+  .nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    /* Adjusts with screen size */
+  }
+
+  .nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #a3a3a3;
+    display: block;
+    margin: auto;
+    transition: width 0.5s;
+  }
+
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+
+  /* Body */
+  body {
+    background-image: linear-gradient(rgba(10, 10, 41, 1), rgba(10, 10, 41, 1)), url(images/newbg2.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  /* Profile Container */
+  .profile-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    /* Adjusts with screen size */
+    border-radius: 40px 40px 0 0;
+    box-shadow: inset 0 0 40px rgba(10, 10, 41, 0.3);
+    width: 90%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .profile-container h1 {
+    font-size: 2rem;
+    /* Adjusts with screen size */
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-field {
+    margin-bottom: 1rem;
+  }
+
+  .profile-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .profile-field input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  .profile-field input:hover {
+    border-color: #3498db;
+  }
+
+  .profile-field input:focus {
+    border-color: #0a0a29;
+    outline: none;
+  }
+
+  /* Password Toggle and Money Add Button */
+  .password-container,
+  .moneyadd-container {
+    position: relative;
+  }
+
+  .password-container .toggle-password,
+  .moneyadd-container .addmoney {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  
+
+  /* Buttons */
+  button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 40px 0 0px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  }
+
+  button::before,
+  #orderList::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+  }
+
+  button:hover::before,
+  #orderList:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+
+  button:hover,
+  #orderList:hover {
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    background-color: #0a0a29;
+    color: #3498db;
+  }
+
+
+
+  button:active,
+  #orderList:active {
+    background-color: #0a0a29;
+    color: #3bbdde;
+    box-shadow: 0 2px #1a5e85;
+    transform: translateY(3px);
+
+  }
+
+  #orderList {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0px 40px 40px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Introduction Section */
+  .introduction {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .introduction h1 {
+    font-size: 3rem;
+    /* Adjusts with screen size */
+  }
+
+  .introduction h2 {
+    font-size: 2rem;
+    /* Adjusts with screen size */
+  }
+
+  .introduction p {
+    margin: 10px 0 40px;
+    font-size: 1.25rem;
+    /* Adjusts with screen size */
+    color: #fff;
+    text-align: justify;
+  }
+
+  /* Hero Button */
+  .hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 1.125rem;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .hero-btn:hover {
+    border-color: #f44336;
+    background-color: #f44336;
+  }
+
+  /* Mobile Styles */
+@media(max-width: 700px) {
+  nav {
+    flex-direction: row;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    z-index: 2;
+    transition: right 0.3s;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .introduction h1 {
+    font-size: 2rem;
+  }
+
+  .introduction h2 {
+    font-size: 1.5rem;
+  }
+
+  .introduction p {
+    font-size: 1rem;
+  }
+
+  .profile-container {
+    width: 80%;
+  }
+}
+
+/* Larger Screen Styles */
+@media(min-width: 700px) {
+  .nav-links {
+   text-align: right;
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+  }
+
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+
+  nav .fa {
+    display: none; /* Hide the menu icon on larger screens */
+  }
+}
